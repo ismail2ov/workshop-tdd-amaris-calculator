@@ -17,4 +17,7 @@ public class Calculator {
     public void clear() {
         value = BigDecimal.ZERO;
     }
+
+    public void add(BigDecimal operand) {
+    }
 }
