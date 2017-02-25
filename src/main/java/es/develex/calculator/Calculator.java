@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 
 public class Calculator {
 
-    private BigDecimal value;
+    private BigDecimal value = BigDecimal.ZERO;
 
     public BigDecimal getValue() {
-        return BigDecimal.ZERO;
+        return value;
     }
 
     public void setValue(BigDecimal value) {
