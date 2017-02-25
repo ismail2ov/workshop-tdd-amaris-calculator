@@ -36,6 +36,9 @@ public class Calculator {
             case "*":
                 op = new MultiplyOperation();
                 break;
+            case "/":
+                op = new DivideOperation();
+                break;
         }
 
         if (op != null) {
