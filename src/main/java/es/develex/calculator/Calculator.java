@@ -45,6 +45,8 @@ public class Calculator {
 
         if (op != null) {
             value = op.apply(value, operand);
+        } else {
+            value = operand;
         }
     }
 }
