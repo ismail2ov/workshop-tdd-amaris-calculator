@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 public class Calculator {
 
     private BigDecimal value = BigDecimal.ZERO;
-    private String operation;
+    private String operation = "";
 
     public BigDecimal getValue() {
         return value;

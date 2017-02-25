@@ -58,4 +58,15 @@ public class OperationTest {
         calculator.setOperation("/");
         calculator.execute(new BigDecimal(0));
     }
+
+    @Test
+    public void whenNotSetOperatorAccumulationIsLastIntroducedValue() throws Exception {
+        calculator.setValue(new BigDecimal(100));
+
+        BigDecimal value = new BigDecimal(28);
+        calculator.execute(value);
+
+        assertEquals(value, calculator.getValue());
+
+    }
 }
