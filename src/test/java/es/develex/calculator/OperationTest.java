@@ -17,7 +17,7 @@ public class OperationTest {
     }
 
     @Test
-    public void whenAddOperationExecutedThenCalculatorAccumulatorIsSum() {
+    public void whenAddOperationExecutedThenCalculatorAccumulatorIsSum() throws Exception {
         calculator.setValue(new BigDecimal(22));
         calculator.setOperation("+");
         calculator.execute(new BigDecimal(18));
@@ -26,7 +26,7 @@ public class OperationTest {
     }
 
     @Test
-    public void whenSubtractOperationExecutedThenCalculatorAccumulatorIsDifference() {
+    public void whenSubtractOperationExecutedThenCalculatorAccumulatorIsDifference() throws Exception {
         calculator.setValue(new BigDecimal(22));
         calculator.setOperation("-");
         calculator.execute(new BigDecimal(18));
@@ -35,7 +35,7 @@ public class OperationTest {
     }
 
     @Test
-    public void whenMultiplicationOperationExecutedThenCalculatorAccumulatorIsProduct() {
+    public void whenMultiplicationOperationExecutedThenCalculatorAccumulatorIsProduct() throws Exception {
         calculator.setValue(new BigDecimal(22));
         calculator.setOperation("*");
         calculator.execute(new BigDecimal(18));
@@ -44,7 +44,7 @@ public class OperationTest {
     }
 
     @Test
-    public void WhenDivideOperationExecutedThenCalculatorAccumulatorIsFraction() {
+    public void WhenDivideOperationExecutedThenCalculatorAccumulatorIsFraction() throws Exception {
         calculator.setValue(new BigDecimal(22));
         calculator.setOperation("/");
         calculator.execute(new BigDecimal(2));
@@ -53,7 +53,7 @@ public class OperationTest {
     }
 
     @Test(expected = DivisionByZeroException.class)
-    public void whenDivideByZeroThenThrowsDivisionByZeroException() {
+    public void whenDivideByZeroThenThrowsDivisionByZeroException() throws Exception {
         calculator.setValue(new BigDecimal(22));
         calculator.setOperation("/");
         calculator.execute(new BigDecimal(0));

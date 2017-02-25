@@ -1,5 +1,7 @@
 package es.develex.calculator;
 
+import es.develex.calculator.exceptions.DivisionByZeroException;
+
 import java.math.BigDecimal;
 
 public class Calculator {
@@ -23,7 +25,7 @@ public class Calculator {
         this.operation = operation;
     }
 
-    public void execute(BigDecimal operand) {
+    public void execute(BigDecimal operand) throws DivisionByZeroException {
         Operation op = null;
 
         switch (operation) {
