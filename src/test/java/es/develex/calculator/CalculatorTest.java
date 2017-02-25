@@ -36,6 +36,7 @@ public class CalculatorTest {
         calculator.setValue(value);
         assertEquals(value, calculator.getValue());
         calculator.clear();
+
         assertEquals(BigDecimal.ZERO, calculator.getValue());
     }
 }

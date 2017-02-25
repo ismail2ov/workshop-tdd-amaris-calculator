@@ -18,7 +18,8 @@ public class OperationTest {
     @Test
     public void whenAddOperationExecutedThenCalculatorAccumulatorIsSum() {
         calculator.setValue(new BigDecimal(22));
-        calculator.add(new BigDecimal(18));
+        calculator.setOperation("+");
+        calculator.execute(new BigDecimal(18));
 
         assertEquals(new BigDecimal(40), calculator.getValue());
     }
@@ -26,7 +27,8 @@ public class OperationTest {
     @Test
     public void whenSubtractOperationExecutedThenCalculatorAccumulatorIsDifference() {
         calculator.setValue(new BigDecimal(22));
-        calculator.substract(new BigDecimal(18));
+        calculator.setOperation("-");
+        calculator.execute(new BigDecimal(18));
 
         assertEquals(new BigDecimal(4), calculator.getValue());
     }
