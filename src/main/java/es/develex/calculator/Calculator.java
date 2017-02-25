@@ -13,4 +13,7 @@ public class Calculator {
     public void setValue(BigDecimal value) {
         this.value = value;
     }
+
+    public void clear() {
+    }
 }

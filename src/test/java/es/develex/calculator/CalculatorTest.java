@@ -29,4 +29,13 @@ public class CalculatorTest {
 
         assertEquals(value, calculator.getValue());
     }
+
+    @Test
+    public void whenClearCalculatorThenHisValueIsZero() {
+        BigDecimal value = new BigDecimal(55);
+        calculator.setValue(value);
+        assertEquals(value, calculator.getValue());
+        calculator.clear();
+        assertEquals(BigDecimal.ZERO, calculator.getValue());
+    }
 }
