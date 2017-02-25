@@ -4,6 +4,6 @@ import java.math.BigDecimal;
 
 public class Calculator {
     public BigDecimal getValue() {
-        return null;
+        return BigDecimal.ZERO;
     }
 }
