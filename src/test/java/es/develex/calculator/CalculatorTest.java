@@ -13,4 +13,14 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertEquals(BigDecimal.ZERO, calculator.getValue());
     }
+
+    @Test
+    public void whenSetTheValueThenCalculatorAccumulationIsValue() {
+        Calculator calculator = new Calculator();
+        BigDecimal value = new BigDecimal(55);
+
+        calculator.setValue(value);
+
+        assertEquals(value, calculator.getValue());
+    }
 }
