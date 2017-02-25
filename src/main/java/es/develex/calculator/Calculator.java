@@ -30,6 +30,9 @@ public class Calculator {
         } else if (operation.equals("-")) {
             Operation op = new SubstractOperation();
             value = op.apply(value, operand);
+        } else if (operation.equals("*")) {
+            Operation op = new MultiplyOperation();
+            value = op.apply(value, operand);
         }
     }
 }
