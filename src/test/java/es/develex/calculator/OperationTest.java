@@ -41,4 +41,13 @@ public class OperationTest {
 
         assertEquals(new BigDecimal(396), calculator.getValue());
     }
+
+    @Test
+    public void WhenDivideOperationExecutedThenCalculatorAccumulatorIsFraction() {
+        calculator.setValue(new BigDecimal(22));
+        calculator.setOperation("/");
+        calculator.execute(new BigDecimal(2));
+
+        assertEquals(new BigDecimal(11), calculator.getValue());
+    }
 }
