@@ -1,5 +1,6 @@
 package es.develex.calculator;
 
+import es.develex.calculator.exceptions.DivisionByZeroException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -49,5 +50,12 @@ public class OperationTest {
         calculator.execute(new BigDecimal(2));
 
         assertEquals(new BigDecimal(11), calculator.getValue());
+    }
+
+    @Test(expected = DivisionByZeroException.class)
+    public void whenDivideByZeroThenThrowsDivisionByZeroException() {
+        calculator.setValue(new BigDecimal(22));
+        calculator.setOperation("/");
+        calculator.execute(new BigDecimal(0));
     }
 }
