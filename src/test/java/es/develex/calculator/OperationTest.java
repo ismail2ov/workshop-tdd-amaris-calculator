@@ -32,4 +32,13 @@ public class OperationTest {
 
         assertEquals(new BigDecimal(4), calculator.getValue());
     }
+
+    @Test
+    public void whenMultiplicationOperationExecutedThenCalculatorAccumulatorIsProduct() {
+        calculator.setValue(new BigDecimal(22));
+        calculator.setOperation("*");
+        calculator.execute(new BigDecimal(18));
+
+        assertEquals(new BigDecimal(396), calculator.getValue());
+    }
 }
