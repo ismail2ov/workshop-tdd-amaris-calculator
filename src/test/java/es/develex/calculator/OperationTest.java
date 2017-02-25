@@ -1,5 +1,6 @@
 package es.develex.calculator;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -7,10 +8,15 @@ import java.math.BigDecimal;
 import static junit.framework.TestCase.assertEquals;
 
 public class OperationTest {
+    private Calculator calculator;
+
+    @Before
+    public void setUp() throws Exception {
+        calculator = new Calculator();
+    }
+
     @Test
     public void whenAddOperationExecutedThenCalculatorAccumulatorIsSum() {
-        Calculator calculator = new Calculator();
-
         calculator.setValue(new BigDecimal(22));
         calculator.add(new BigDecimal(18));
 
@@ -19,8 +25,6 @@ public class OperationTest {
 
     @Test
     public void whenSubtractOperationExecutedThenCalculatorAccumulatorIsDifference() {
-        Calculator calculator = new Calculator();
-
         calculator.setValue(new BigDecimal(22));
         calculator.substract(new BigDecimal(18));
 
