@@ -21,4 +21,7 @@ public class Calculator {
     public void add(BigDecimal operand) {
         value = value.add(operand);
     }
+
+    public void substract(BigDecimal operand) {
+    }
 }

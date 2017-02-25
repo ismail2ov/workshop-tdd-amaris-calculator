@@ -16,4 +16,14 @@ public class OperationTest {
 
         assertEquals(new BigDecimal(40), calculator.getValue());
     }
+
+    @Test
+    public void whenSubtractOperationExecutedThenCalculatorAccumulatorIsDifference() {
+        Calculator calculator = new Calculator();
+
+        calculator.setValue(new BigDecimal(22));
+        calculator.substract(new BigDecimal(18));
+
+        assertEquals(new BigDecimal(4), calculator.getValue());
+    }
 }
