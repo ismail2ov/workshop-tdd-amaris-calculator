@@ -23,5 +23,6 @@ public class Calculator {
     }
 
     public void substract(BigDecimal operand) {
+        value = value.subtract(operand);
     }
 }
