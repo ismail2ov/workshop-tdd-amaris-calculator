@@ -24,14 +24,21 @@ public class Calculator {
     }
 
     public void execute(BigDecimal operand) {
-        if (operation.equals("+")) {
-            Operation op = new AddOperation();
-            value = op.apply(value, operand);
-        } else if (operation.equals("-")) {
-            Operation op = new SubstractOperation();
-            value = op.apply(value, operand);
-        } else if (operation.equals("*")) {
-            Operation op = new MultiplyOperation();
+        Operation op = null;
+
+        switch (operation) {
+            case "+":
+                op = new AddOperation();
+                break;
+            case "-":
+                op = new SubstractOperation();
+                break;
+            case "*":
+                op = new MultiplyOperation();
+                break;
+        }
+
+        if (op != null) {
             value = op.apply(value, operand);
         }
     }
